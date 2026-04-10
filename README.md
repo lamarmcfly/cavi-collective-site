@@ -1,3 +1,12 @@
+# Cavi Collective (marketing + demo dashboard)
+
+- **Repository:** [github.com/lamarmcfly/cavi-collective-site](https://github.com/lamarmcfly/cavi-collective-site)
+- **Production (Vercel):** [cavi-collective-site.vercel.app](https://cavi-collective-site.vercel.app)
+
+Next.js 16 App Router. Pushes to `main` deploy via the linked Vercel project.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
