@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { divisions } from "@/data/divisions";
@@ -35,106 +35,51 @@ export function Footer() {
   const agentStat = getAgentCountForMarketing();
 
   return (
-    <footer className="bg-white border-t border-zinc-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+    <footer className="border-t border-slate-200/80 bg-white/95">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
-              className="inline-flex rounded-xl bg-zinc-950 p-2 ring-1 ring-violet-500/30 shadow-md shadow-indigo-950/25"
-              aria-label="Cavi Vault home"
+              className="inline-flex rounded-2xl border border-slate-200/90 bg-white p-1.5 shadow-sm"
+              aria-label="Cavi home"
             >
-              <BrandLogo className="h-32 w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 object-contain" />
+              <BrandLogo className="h-20 w-20 object-contain sm:h-24 sm:w-24" />
             </Link>
-            <p className="mt-4 text-sm text-zinc-600 leading-relaxed">
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">
               {CAVI_DIFFERENCE.footerOneLiner}
             </p>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider">
-              Product
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider">
-              Divisions
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.divisions.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider">
-              Company
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-900 uppercase tracking-wider">
-              Legal
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {Object.entries(footerLinks).map(([group, links]) => (
+            <div key={group}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900">
+                {group}
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-600 transition-colors hover:text-slate-900"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-zinc-200/80">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-zinc-500">
+        <div className="mt-12 border-t border-slate-200/80 pt-6">
+          <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
+            <p className="text-sm text-slate-500">
               &copy; {new Date().getFullYear()} Cavi Collective. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <span className="text-xs text-zinc-500 font-[family-name:var(--font-jetbrains)]">
-                {agentStat} Agents &middot; {DIVISION_COUNT_DISPLAY} Divisions
-                &middot; 24/7 Execution
-              </span>
-            </div>
+            <span className="text-xs text-slate-500 font-[family-name:var(--font-jetbrains)]">
+              {agentStat} Agents &middot; {DIVISION_COUNT_DISPLAY} Divisions &middot; 24/7 Execution
+            </span>
           </div>
         </div>
       </div>

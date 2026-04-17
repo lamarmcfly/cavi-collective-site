@@ -39,10 +39,10 @@ export default function AnalyticsPage() {
     return (
       <div className="p-6 lg:p-8">
         <div className="animate-pulse space-y-6">
-          <div className="h-8 w-48 bg-white/5 rounded" />
+          <div className="h-8 w-48 bg-slate-800/70 rounded" />
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-32 bg-white/5 rounded-2xl" />
+              <div key={i} className="h-32 bg-slate-800/70 rounded-2xl" />
             ))}
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function AnalyticsPage() {
           <h1 className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
             Analytics
           </h1>
-          <p className="mt-1 text-zinc-400">
+          <p className="mt-1 text-slate-300">
             Performance metrics and insights
           </p>
         </div>
@@ -198,7 +198,7 @@ export default function AnalyticsPage() {
                     className="w-3 h-3 rounded-full"
                     style={{ backgroundColor: division.color }}
                   />
-                  <span className="text-sm text-zinc-400">
+                  <span className="text-sm text-slate-300">
                     {division.divisionName}
                   </span>
                 </div>

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -34,13 +34,13 @@ const consultationTopics = [
     icon: Shield,
     title: "Surface governance and risk questions",
     description:
-      "The questions your team would have to answer before scaling — made explicit and documented, not assumed or deferred.",
+      "The questions your team would have to answer before scaling - made explicit and documented, not assumed or deferred.",
   },
   {
     icon: BarChart3,
     title: "Align on feasibility and fit",
     description:
-      "Whether your stack and operating reality support a pilot, with no promises — just a plain assessment of whether it's the right next step.",
+      "Whether your stack and operating reality support a pilot, with no promises - just a plain assessment of whether it's the right next step.",
   },
   {
     icon: FileCheck,
@@ -69,7 +69,7 @@ const pilotDeliverables = [
   {
     title: "Executive Go/No Readout",
     description:
-      "Leadership-ready evidence to approve or stop before committing broader budget. Not a slide deck — a structured decision package with clear criteria, risks, and recommendations.",
+      "Leadership-ready evidence to approve or stop before committing broader budget. Not a slide deck - a structured decision package with clear criteria, risks, and recommendations.",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function PilotPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-stone-50 pt-36 md:pt-40 lg:pt-44">
+      <main className="flex-1 bg-stone-50 pt-28 md:pt-32 lg:pt-36">
         <section className="relative py-24 overflow-hidden bg-gradient-to-b from-stone-50 to-white">
           <FloatingOrbs variant="subtle" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,7 +89,7 @@ export default function PilotPage() {
                 Proof before scale.
               </h1>
               <p className="mt-4 text-xl text-zinc-600">
-                Whether you need a two-agent start or a division-scale path—we
+                Whether you need a two-agent start or a division-scale path-we
                 map workflows, approvals, and fit with no commitment.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function PilotPage() {
             <SectionHeader
               tag="The First Call"
               title="What the Consultation Clarifies"
-              description="30 minutes to assess fit and surface what matters. Small teams are welcome—we often begin with a minimal lead + worker bundle and expand as you grow."
+              description="30 minutes to assess fit and surface what matters. Small teams are welcome-we often begin with a minimal lead + worker bundle and expand as you grow."
             />
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">

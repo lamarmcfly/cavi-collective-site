@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -8,23 +8,21 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-white/10 text-white",
-        primary:
-          "border border-indigo-200/90 bg-indigo-100 text-indigo-900",
-        secondary: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
-        success: "bg-green-500/20 text-green-400 border border-green-500/30",
-        warning: "bg-amber-500/20 text-amber-400 border border-amber-500/30",
-        danger: "bg-red-500/20 text-red-400 border border-red-500/30",
-        outline: "border border-zinc-300 text-zinc-600 bg-white/80",
-        // Division-specific variants
-        executive: "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30",
-        engineering: "bg-blue-500/20 text-blue-400 border border-blue-500/30",
-        marketing: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
-        media: "bg-teal-500/20 text-teal-400 border border-teal-500/30",
-        talent: "bg-amber-500/20 text-amber-400 border border-amber-500/30",
-        "project-ops": "bg-red-500/20 text-red-400 border border-red-500/30",
-        research: "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30",
-        infrastructure: "bg-lime-500/20 text-lime-400 border border-lime-500/30",
+        default: "bg-slate-800 text-slate-100 border border-slate-700",
+        primary: "border border-blue-200 bg-blue-50 text-blue-700",
+        secondary: "bg-violet-100 text-violet-700 border border-violet-200",
+        success: "bg-emerald-100 text-emerald-700 border border-emerald-200",
+        warning: "bg-amber-100 text-amber-700 border border-amber-200",
+        danger: "bg-red-100 text-red-700 border border-red-200",
+        outline: "border border-slate-300 text-slate-600 bg-white/90",
+        executive: "bg-indigo-100 text-indigo-700 border border-indigo-200",
+        engineering: "bg-blue-100 text-blue-700 border border-blue-200",
+        marketing: "bg-purple-100 text-purple-700 border border-purple-200",
+        media: "bg-teal-100 text-teal-700 border border-teal-200",
+        talent: "bg-amber-100 text-amber-700 border border-amber-200",
+        "project-ops": "bg-red-100 text-red-700 border border-red-200",
+        research: "bg-cyan-100 text-cyan-700 border border-cyan-200",
+        infrastructure: "bg-lime-100 text-lime-700 border border-lime-200",
       },
       size: {
         sm: "text-xs px-2 py-0.5",
@@ -68,7 +66,6 @@ function Badge({
   );
 }
 
-// Division badge helper
 function DivisionBadge({
   divisionId,
   children,

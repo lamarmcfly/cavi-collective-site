@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -121,7 +121,7 @@ export default function PricingPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-stone-50 pt-36 md:pt-40 lg:pt-44">
+      <main className="flex-1 bg-stone-50 pt-28 md:pt-32 lg:pt-36">
         <section className="relative py-24 overflow-hidden bg-gradient-to-b from-stone-50 to-white">
           <FloatingOrbs variant="subtle" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -132,7 +132,7 @@ export default function PricingPage() {
               Pricing that matches how you work
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-zinc-600">
-              From a two-agent start—delegator plus worker—to full divisions and
+              From a two-agent start-delegator plus worker-to full divisions and
               enterprise rollout. Same idea at every tier: your people approve
               what matters; AI handles execution.
             </p>
@@ -152,7 +152,7 @@ export default function PricingPage() {
             <SectionHeader
               tag="Team size"
               title="Start where you are"
-              description="Orchestrator + worker bundles, division depth, or full platform—the same human-in-the-loop model at every tier."
+              description="Orchestrator + worker bundles, division depth, or full platform-the same human-in-the-loop model at every tier."
             />
             <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
               {PRICING_STARTER_CARDS.map((card, index) => {
@@ -300,7 +300,7 @@ export default function PricingPage() {
                 href="/divisions/engineering"
                 className="text-sm text-zinc-600 hover:text-zinc-900"
               >
-                View all 8+ divisions →
+                View all 8+ divisions {"->"}
               </Link>
             </div>
           </div>

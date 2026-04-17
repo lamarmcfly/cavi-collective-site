@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -51,7 +51,7 @@ export default function EnterprisePage() {
     <>
       <Header />
       <main className="flex-1 bg-stone-50">
-        <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100/90 pt-36 hero-grain md:pt-40 lg:pt-44">
+        <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100/90 pt-28 hero-grain md:pt-32 lg:pt-36">
           <FloatingOrbs />
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -65,7 +65,7 @@ export default function EnterprisePage() {
               </h1>
               <p className="mt-6 text-xl leading-relaxed text-zinc-600">
                 Deploy coordinated AI divisions that mirror how your company
-                actually runs—{agentStat} specialized agents across{" "}
+                actually runs-{agentStat} specialized agents across{" "}
                 {DIVISION_COUNT_DISPLAY} divisions, with clear approvals,
                 audit-friendly handoffs, and room to grow as the roster expands.
               </p>
@@ -103,7 +103,7 @@ export default function EnterprisePage() {
                 >
                   Start with an orchestrator + worker bundle
                 </Link>{" "}
-                on the same platform—then scale into full divisions when you are
+                on the same platform-then scale into full divisions when you are
                 ready.
               </p>
             </div>

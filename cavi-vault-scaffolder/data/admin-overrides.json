@@ -1,0 +1,16 @@
+[
+  {
+    "principal": "client-success@cavi.vault",
+    "resourceType": "drive_folder",
+    "resourceId": "client-facing-acme",
+    "access": "edit",
+    "reason": "Client Success needs direct updates on shared packet."
+  },
+  {
+    "principal": "external-client@example.com",
+    "resourceType": "drive_file",
+    "resourceId": "contract-acme-2026",
+    "access": "view",
+    "reason": "Limited external viewer permission for signed contract."
+  }
+]

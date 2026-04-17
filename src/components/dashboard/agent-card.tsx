@@ -36,8 +36,8 @@ export function AgentCard({ agent, status, currentTask }: AgentCardProps) {
             />
           </div>
           <div>
-            <h3 className="font-medium text-white">{agent.name}</h3>
-            <p className="text-sm text-zinc-500">{agent.role}</p>
+            <h3 className="font-medium text-slate-100">{agent.name}</h3>
+            <p className="text-sm text-slate-300">{agent.role}</p>
           </div>
         </div>
       </div>
@@ -49,15 +49,15 @@ export function AgentCard({ agent, status, currentTask }: AgentCardProps) {
       </div>
 
       {currentTask && status === "active" && (
-        <div className="mt-4 p-3 rounded-lg bg-white/[0.02] border border-white/5">
-          <p className="text-xs text-zinc-500 uppercase tracking-wider mb-1">
+        <div className="mt-4 p-3 rounded-lg bg-slate-800/60 border border-slate-700/80">
+          <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">
             Current Task
           </p>
-          <p className="text-sm text-zinc-300 line-clamp-2">{currentTask}</p>
+          <p className="text-sm text-slate-200 line-clamp-2">{currentTask}</p>
         </div>
       )}
 
-      <div className="mt-4 pt-4 border-t border-white/5">
+      <div className="mt-4 pt-4 border-t border-slate-700/80">
         <StatusBadge status={status} />
       </div>
     </GlassCard>

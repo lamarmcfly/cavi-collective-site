@@ -48,14 +48,14 @@ export default function ActivityPage() {
           <h1 className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
             Activity Feed
           </h1>
-          <p className="mt-1 text-zinc-400">Real-time agent activity across all divisions</p>
+          <p className="mt-1 text-slate-300">Real-time agent activity across all divisions</p>
         </div>
         <button
           onClick={() => setIsLive(!isLive)}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
             isLive
-              ? "bg-green-500/20 text-green-400 border border-green-500/30"
-              : "bg-white/5 text-zinc-400 border border-white/10"
+              ? "bg-green-500/20 text-green-300 border border-green-500/30"
+              : "bg-slate-800/70 text-slate-300 border border-slate-700/80"
           }`}
         >
           <Radio className={`w-4 h-4 ${isLive ? "animate-pulse" : ""}`} />
@@ -69,8 +69,8 @@ export default function ActivityPage() {
           onClick={() => setSelectedDivision(null)}
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
             selectedDivision === null
-              ? "bg-white/10 text-white"
-              : "bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10"
+              ? "bg-blue-500/20 text-blue-100 border border-blue-400/35"
+              : "bg-slate-800/70 text-slate-300 hover:text-white hover:bg-slate-700/80"
           }`}
         >
           All
@@ -81,8 +81,8 @@ export default function ActivityPage() {
             onClick={() => setSelectedDivision(division.id)}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
               selectedDivision === division.id
-                ? "bg-white/10 text-white"
-                : "bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10"
+                ? "bg-blue-500/20 text-blue-100 border border-blue-400/35"
+                : "bg-slate-800/70 text-slate-300 hover:text-white hover:bg-slate-700/80"
             }`}
           >
             {division.shortName}
@@ -104,7 +104,7 @@ export default function ActivityPage() {
               <GlassCard className="py-4">
                 <div className="flex items-start gap-4">
                   {/* Agent Avatar */}
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-sm font-medium text-zinc-400 shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center text-sm font-medium text-slate-300 shrink-0">
                     {activity.agentName.charAt(0)}
                   </div>
 

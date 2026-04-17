@@ -102,7 +102,7 @@ export default function TeamPage() {
           <h1 className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
             My Team
           </h1>
-          <p className="mt-1 text-zinc-400">
+          <p className="mt-1 text-slate-300">
             {agents.length} agents across {divisions.length} divisions
           </p>
         </div>
@@ -119,8 +119,8 @@ export default function TeamPage() {
           onClick={() => setSelectedDivision(null)}
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
             selectedDivision === null
-              ? "bg-white/10 text-white"
-              : "bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10"
+              ? "bg-blue-500/20 text-blue-100 border border-blue-400/35"
+              : "bg-slate-800/70 text-slate-300 hover:text-white hover:bg-slate-700/80"
           }`}
         >
           All Divisions
@@ -131,8 +131,8 @@ export default function TeamPage() {
             onClick={() => setSelectedDivision(division.id)}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
               selectedDivision === division.id
-                ? "bg-white/10 text-white"
-                : "bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10"
+                ? "bg-blue-500/20 text-blue-100 border border-blue-400/35"
+                : "bg-slate-800/70 text-slate-300 hover:text-white hover:bg-slate-700/80"
             }`}
             style={{
               borderColor:

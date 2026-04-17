@@ -34,7 +34,7 @@ export default function BuilderPage() {
           <h1 className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
             Team Builder
           </h1>
-          <p className="mt-1 text-zinc-400">
+          <p className="mt-1 text-slate-300">
             Select divisions to build your custom AI team
           </p>
         </div>
@@ -45,14 +45,14 @@ export default function BuilderPage() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-6">
             <div>
-              <p className="text-sm text-zinc-400">Selected Divisions</p>
+              <p className="text-sm text-slate-300">Selected Divisions</p>
               <p className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
                 {selectedCount}
               </p>
             </div>
             <div className="w-px h-10 bg-white/10 hidden sm:block" />
             <div>
-              <p className="text-sm text-zinc-400">Total Agents</p>
+              <p className="text-sm text-slate-300">Total Agents</p>
               <p className="text-2xl font-bold text-white font-[family-name:var(--font-inter)]">
                 {totalAgents}
               </p>
@@ -113,7 +113,7 @@ export default function BuilderPage() {
                   className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                     isSelected
                       ? "bg-green-500 text-white"
-                      : "bg-white/5 text-zinc-400 hover:bg-white/10"
+                      : "bg-slate-800/80 text-slate-300 hover:bg-slate-700/80"
                   }`}
                 >
                   {isSelected ? (
@@ -124,7 +124,7 @@ export default function BuilderPage() {
                 </button>
               </div>
 
-              <p className="mt-4 text-sm text-zinc-400 line-clamp-2">
+              <p className="mt-4 text-sm text-slate-300 line-clamp-2">
                 {division.description}
               </p>
 
@@ -132,7 +132,7 @@ export default function BuilderPage() {
                 {division.capabilities.slice(0, 3).map((cap, i) => (
                   <span
                     key={i}
-                    className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-zinc-500"
+                    className="text-xs px-2 py-0.5 rounded-full bg-slate-800/70 text-slate-300"
                   >
                     {cap.split("(")[0].trim().slice(0, 25)}
                     {cap.split("(")[0].trim().length > 25 ? "..." : ""}

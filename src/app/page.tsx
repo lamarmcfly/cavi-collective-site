@@ -1,4 +1,4 @@
-import { Header } from "@/components/layout/header";
+﻿import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { CaviDifference } from "@/components/sections/cavi-difference";
@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-36 md:pt-40 lg:pt-44">
+      <main className="flex-1 pt-28 md:pt-32 lg:pt-36">
         <Hero />
         <CaviDifference />
         <WorkflowLadder />

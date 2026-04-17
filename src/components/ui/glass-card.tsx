@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
@@ -6,7 +6,6 @@ import { motion, HTMLMotionProps } from "framer-motion";
 
 interface GlassCardProps extends HTMLMotionProps<"div"> {
   variant?: "default" | "hover" | "interactive";
-  /** `dark` for dashboard; `light` for marketing pages. */
   appearance?: "dark" | "light";
   accentColor?: string;
   noPadding?: boolean;
@@ -26,24 +25,24 @@ const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(
     ref
   ) => {
     const baseDark =
-      "rounded-2xl border backdrop-blur-xl bg-white/[0.03] border-white/[0.08]";
+      "rounded-2xl border bg-slate-900/55 border-slate-700/60 shadow-lg shadow-black/20";
     const baseLight =
-      "rounded-2xl border backdrop-blur-xl bg-white/80 border-zinc-200/90 shadow-sm shadow-zinc-900/[0.04]";
+      "rounded-2xl border bg-white/88 border-slate-200/80 shadow-sm shadow-slate-900/[0.06]";
 
     const variantStylesDark = {
       default: "",
       hover:
-        "hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300",
+        "hover:bg-slate-800/65 hover:border-slate-600/70 transition-all duration-300",
       interactive:
-        "hover:bg-white/[0.06] hover:border-white/[0.12] hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 transition-all duration-300 cursor-pointer",
+        "hover:bg-slate-800/65 hover:border-slate-500/70 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/30 transition-all duration-300 cursor-pointer",
     };
 
     const variantStylesLight = {
       default: "",
       hover:
-        "hover:bg-white/95 hover:border-zinc-300/90 transition-all duration-300",
+        "hover:bg-white hover:border-slate-300/90 transition-all duration-300",
       interactive:
-        "hover:bg-white hover:border-zinc-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-zinc-900/10 transition-all duration-300 cursor-pointer",
+        "hover:bg-white hover:border-blue-200/80 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-900/10 transition-all duration-300 cursor-pointer",
     };
 
     const variantStyles =

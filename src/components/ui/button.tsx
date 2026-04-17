@@ -1,21 +1,21 @@
-"use client";
+﻿"use client";
 
 import { forwardRef, cloneElement, isValidElement } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-50 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/25 hover:from-blue-500 hover:via-indigo-500 hover:to-violet-500 hover:shadow-lg hover:shadow-violet-500/30 active:scale-[0.99]",
+          "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-sm shadow-blue-500/30 hover:from-blue-500 hover:to-indigo-500 hover:shadow-md hover:shadow-blue-500/35 active:translate-y-px",
         secondary:
-          "bg-white text-zinc-800 border border-zinc-200 hover:bg-zinc-50 hover:border-zinc-300 shadow-sm",
-        ghost: "text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100/80",
+          "bg-white text-slate-800 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-sm",
+        ghost: "text-slate-600 hover:text-slate-900 hover:bg-slate-100/80",
         outline:
-          "border border-zinc-300 text-zinc-800 bg-transparent hover:bg-zinc-100/60 hover:border-zinc-400",
+          "border border-slate-300 text-slate-800 bg-transparent hover:bg-slate-100/70 hover:border-slate-400",
         danger:
           "bg-red-500/10 text-red-700 border border-red-200 hover:bg-red-500/15",
         success:

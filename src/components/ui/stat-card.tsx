@@ -32,7 +32,7 @@ export function StatCard({
     >
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm font-medium text-zinc-400">{label}</p>
+          <p className="text-sm font-medium text-slate-300">{label}</p>
           <p className="mt-2 text-3xl font-bold text-white font-[family-name:var(--font-inter)]">
             {value}
           </p>
@@ -40,26 +40,26 @@ export function StatCard({
             <div className="mt-2 flex items-center gap-1">
               {isPositive && <TrendingUp className="w-4 h-4 text-green-400" />}
               {isNegative && <TrendingDown className="w-4 h-4 text-red-400" />}
-              {isNeutral && <Minus className="w-4 h-4 text-zinc-400" />}
+              {isNeutral && <Minus className="w-4 h-4 text-slate-300" />}
               <span
                 className={cn(
                   "text-sm font-medium",
                   isPositive && "text-green-400",
                   isNegative && "text-red-400",
-                  isNeutral && "text-zinc-400"
+                  isNeutral && "text-slate-300"
                 )}
               >
                 {isPositive && "+"}
                 {change}%
               </span>
               {changeLabel && (
-                <span className="text-sm text-zinc-500">{changeLabel}</span>
+                <span className="text-sm text-slate-400">{changeLabel}</span>
               )}
             </div>
           )}
         </div>
         {icon && (
-          <div className="p-2 rounded-xl bg-white/5 text-zinc-400">{icon}</div>
+          <div className="p-2 rounded-xl bg-slate-800/70 text-slate-300">{icon}</div>
         )}
       </div>
     </GlassCard>
@@ -79,7 +79,7 @@ export function BigStat({ value, label, className }: BigStatProps) {
       <p className="text-4xl md:text-5xl font-bold text-white font-[family-name:var(--font-inter)]">
         {value}
       </p>
-      <p className="mt-1 text-sm text-zinc-400 uppercase tracking-wider">{label}</p>
+      <p className="mt-1 text-sm text-slate-300 uppercase tracking-wider">{label}</p>
     </div>
   );
 }

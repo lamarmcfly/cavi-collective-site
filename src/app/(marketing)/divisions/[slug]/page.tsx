@@ -57,7 +57,7 @@ export default async function DivisionPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-stone-50 pt-36 md:pt-40 lg:pt-44">
+      <main className="flex-1 bg-stone-50 pt-28 md:pt-32 lg:pt-36">
         <section className="relative py-24 overflow-hidden bg-gradient-to-b from-stone-50 to-white">
           <FloatingOrbs variant="subtle" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

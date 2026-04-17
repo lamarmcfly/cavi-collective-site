@@ -1,0 +1,50 @@
+name: Workspace Scaffolder Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "Command to run (scaffold|sync|publish|govern)"
+        required: true
+        default: "sync"
+  schedule:
+    - cron: "0 13 * * 1-5"
+
+jobs:
+  run-scaffolder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run check
+
+      - name: Run command
+        env:
+          NODE_ENV: production
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
+          GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+          GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+          GOOGLE_DRIVE_ROOT_ID: ${{ secrets.GOOGLE_DRIVE_ROOT_ID }}
+          AUDIT_LOG_PATH: data/audit-log.jsonl
+          REGISTRY_PATH: data/docs-registry.json
+          OVERRIDES_PATH: data/admin-overrides.json
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            npm run dev -- "${{ github.event.inputs.command }}" --live
+          else
+            npm run dev -- sync --live
+            npm run dev -- publish --live
+            npm run dev -- govern --live
+          fi

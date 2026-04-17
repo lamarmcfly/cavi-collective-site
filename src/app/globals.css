@@ -1,28 +1,21 @@
-@import "tailwindcss";
-
-/* ========================================
-   CAVI COLLECTIVE - Design System (marketing: light default)
-   ======================================== */
+﻿@import "tailwindcss";
 
 :root {
-  /* Marketing / page */
-  --background: #fafaf9;
-  --background-secondary: #f5f5f4;
+  --background: #f6f8fc;
+  --background-secondary: #eef2f9;
   --surface: #ffffff;
-  --surface-elevated: #fafaf9;
+  --surface-elevated: #f9fbff;
 
-  --foreground: #18181b;
-  --foreground-secondary: #52525b;
-  --foreground-muted: #a1a1aa;
+  --foreground: #0f172a;
+  --foreground-secondary: #334155;
+  --foreground-muted: #64748b;
 
-  --border: rgba(24, 24, 27, 0.08);
-  --border-hover: rgba(24, 24, 27, 0.14);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-hover: rgba(37, 99, 235, 0.24);
 
-  /* App shell (dashboard) — reference only; components use explicit dark classes */
-  --dashboard-bg: #0a0a0b;
-  --dashboard-surface: #1a1a1d;
+  --dashboard-bg: #0b1220;
+  --dashboard-surface: #111a2e;
 
-  /* Division Colors */
   --div-executive: #6366f1;
   --div-engineering: #3b82f6;
   --div-marketing: #8b5cf6;
@@ -32,27 +25,23 @@
   --div-research: #06b6d4;
   --div-infrastructure: #84cc16;
 
-  /* Status Colors */
   --status-active: #22c55e;
-  --status-idle: #71717a;
+  --status-idle: #94a3b8;
   --status-completed: #3b82f6;
   --status-pending: #f59e0b;
 
-  /* Accent — blue / indigo / violet (logo-aligned) */
-  --accent-primary: #4f46e5;
-  --accent-primary-hover: #4338ca;
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
   --accent-secondary: #7c3aed;
 
-  /* Glass (light surfaces) */
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-bg-hover: rgba(255, 255, 255, 0.88);
-  --glass-border: rgba(24, 24, 27, 0.08);
-  --glass-blur: 16px;
+  --glass-bg: rgba(255, 255, 255, 0.84);
+  --glass-bg-hover: rgba(255, 255, 255, 0.94);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --glass-blur: 18px;
 
-  /* Glass dark (dashboard) */
-  --glass-bg-dark: rgba(255, 255, 255, 0.03);
-  --glass-bg-hover-dark: rgba(255, 255, 255, 0.06);
-  --glass-border-dark: rgba(255, 255, 255, 0.08);
+  --glass-bg-dark: rgba(148, 163, 184, 0.08);
+  --glass-bg-hover-dark: rgba(148, 163, 184, 0.16);
+  --glass-border-dark: rgba(148, 163, 184, 0.2);
 }
 
 @theme inline {
@@ -81,14 +70,16 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(1200px 600px at 10% -20%, rgba(37, 99, 235, 0.12), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(124, 58, 237, 0.1), transparent 42%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Glass — light marketing */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -101,7 +92,6 @@ body {
   border-color: var(--border-hover);
 }
 
-/* Glass — dark (dashboard) */
 .glass-dark {
   background: var(--glass-bg-dark);
   backdrop-filter: blur(var(--glass-blur));
@@ -111,22 +101,16 @@ body {
 
 .glass-dark:hover {
   background: var(--glass-bg-hover-dark);
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(148, 163, 184, 0.32);
 }
 
 .text-gradient {
-  background: linear-gradient(
-    135deg,
-    #2563eb 0%,
-    #4f46e5 45%,
-    #7c3aed 100%
-  );
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 48%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Subtle film grain for hero depth */
 .hero-grain {
   position: relative;
 }
@@ -134,7 +118,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.35;
+  opacity: 0.25;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
@@ -219,12 +203,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
+  background: #94a3b8;
 }
 
 :focus-visible {
@@ -233,6 +217,6 @@ body {
 }
 
 ::selection {
-  background: rgba(79, 70, 229, 0.22);
+  background: rgba(37, 99, 235, 0.2);
   color: var(--foreground);
 }

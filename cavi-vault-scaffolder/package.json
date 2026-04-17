@@ -1,0 +1,32 @@
+{
+  "name": "cavi-vault-scaffolder",
+  "version": "1.0.0",
+  "description": "Automation service for Cavi Notion + Drive workspace scaffolding and governance",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "ops:daily": "npm run dev -- sync && npm run dev -- publish && npm run dev -- govern",
+    "bootstrap:live": "npm run dev -- bootstrap --live",
+    "portal:start": "npm run dev -- portal --port 8787",
+    "notion:build:live": "npm run dev -- scaffold --live"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@notionhq/client": "^5.1.0",
+    "commander": "^14.0.3",
+    "dotenv": "^17.4.2",
+    "googleapis": "^150.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
