@@ -22,9 +22,10 @@ export default function SignatureGeneratorPage() {
     email: "",
   });
   const [copied, setCopied] = useState(false);
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
 
   const handleCopy = async () => {
-    const html = generateSignatureHtml(data);
+    const html = generateSignatureHtml(data, { showDisclaimer });
     const ok = await copySignatureToClipboard(html);
     if (ok) {
       setCopied(true);
@@ -33,7 +34,7 @@ export default function SignatureGeneratorPage() {
   };
 
   const handleDownload = () => {
-    const html = generateSignatureHtml(data);
+    const html = generateSignatureHtml(data, { showDisclaimer });
     const name = data.fullName.trim()
       ? data.fullName.trim().replace(/\s+/g, "-").toLowerCase()
       : "cavi";
@@ -59,11 +60,22 @@ export default function SignatureGeneratorPage() {
             Your Details
           </h2>
           <SignatureForm data={data} onChange={setData} />
+
+          {/* Disclaimer toggle */}
+          <label className="mt-6 flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showDisclaimer}
+              onChange={(e) => setShowDisclaimer(e.target.checked)}
+              className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-blue-500 focus:ring-blue-400/40"
+            />
+            <span className="text-sm text-slate-300">Include confidentiality disclaimer</span>
+          </label>
         </GlassCard>
 
         {/* Preview */}
         <GlassCard appearance="dark" className="lg:sticky lg:top-8 lg:self-start">
-          <SignaturePreview data={data} />
+          <SignaturePreview data={data} showDisclaimer={showDisclaimer} />
         </GlassCard>
       </div>
 

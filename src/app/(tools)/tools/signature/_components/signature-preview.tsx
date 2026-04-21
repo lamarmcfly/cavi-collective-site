@@ -8,10 +8,11 @@ import {
 
 interface SignaturePreviewProps {
   data: SignatureData;
+  showDisclaimer: boolean;
 }
 
-export function SignaturePreview({ data }: SignaturePreviewProps) {
-  const html = generateSignatureHtml(data, { logoUrl: LOGO_URL_LOCAL });
+export function SignaturePreview({ data, showDisclaimer }: SignaturePreviewProps) {
+  const html = generateSignatureHtml(data, { logoUrl: LOGO_URL_LOCAL, showDisclaimer });
 
   return (
     <div>
