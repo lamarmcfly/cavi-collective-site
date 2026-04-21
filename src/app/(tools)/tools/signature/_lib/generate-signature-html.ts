@@ -69,8 +69,8 @@ export function generateSignatureHtml(
 <table ${tbl("background-color:#ffffff;max-width:600px;width:600px;font-family:Arial,Helvetica,sans-serif;")} bgcolor="#ffffff">
 <tr ${tr0}><td ${td0("background-color:#ffffff;padding:0;")} bgcolor="#ffffff">
 <table ${tbl("")} width="100%"><tr ${tr0}>
-<td ${td0("background-color:#ffffff;padding:24px 20px 24px 24px;vertical-align:middle;width:120px;")} bgcolor="#ffffff">
-  <a href="https://www.cavivaultagents.io" style="text-decoration:none;"><img src="${logoUrl}" alt="Cavi Vault Agents" width="100" height="100" style="display:block;border:0;outline:0;width:100px;height:100px;" /></a>
+<td ${td0("background-color:#ffffff;padding:24px 20px 24px 24px;vertical-align:middle;width:180px;")} bgcolor="#ffffff">
+  <a href="https://www.cavivaultagents.io" style="text-decoration:none;"><img src="${logoUrl}" alt="Cavi Vault Agents" width="160" height="160" style="display:block;border:0;outline:0;width:160px;height:160px;" /></a>
 </td>
 <td ${td0("background-color:#ffffff;padding:24px 24px 24px 0;vertical-align:middle;")} bgcolor="#ffffff">
   <p style="font-size:20px;font-weight:700;color:#2b2b3d;line-height:1.2;margin:0 0 2px 0;padding:0;">${name}</p>
